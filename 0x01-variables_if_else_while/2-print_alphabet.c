@@ -6,10 +6,12 @@
 int main(void)
 {
 	char c[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i = 0;
 
-	for (int i = 0; i < 26; i++)
+	while (i != 26)
 	{
 		putchar(c[i]);
+		i++;
 	}
 	return (0);
 }
