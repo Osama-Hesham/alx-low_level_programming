@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /**
  * main - check if variable is +ve or -ve
