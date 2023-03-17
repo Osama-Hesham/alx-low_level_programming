@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include <conio.h>
 /**
  * main - prints a line
  * Return: 1 (success)
