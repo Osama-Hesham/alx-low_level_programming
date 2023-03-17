@@ -5,16 +5,19 @@
  */
 int main(void)
 {
-	char i = '0';
+	int i = 9876543210;
+	int x = i % 10;
+	i = i / 10
 
 	while (1)
 	{
-		if ( i == '9')
+		putchar(x);
+		if ( x == 9)
 		{
 			break;
 		}
-		putchar(i);
-		i++;
+		i = i / 10;
+		x = i % 10;
 	}
 	putchar('\n');
 	return (0);
