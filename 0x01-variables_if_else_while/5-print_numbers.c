@@ -7,10 +7,10 @@ int main(void)
 {
 	int i = 0;
 
-	while(i != 0)
+	while (i != 0)
 	{
-		putchar(i);
+		printf("%d", i);
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
