@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _islower - blalbla
+ * @c: check char
  * Return: 0 or 1
  */
 int _islower(int c)
