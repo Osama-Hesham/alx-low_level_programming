@@ -3,7 +3,7 @@
  * main- blablabla
  * Return: blablalba
  */
-int main(void)
+void print_alphabet(void)
 {       
 	char c;
 
