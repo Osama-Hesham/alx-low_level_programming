@@ -4,13 +4,13 @@
  * Return: blablalba
  */
 void print_alphabet_x10(void)
-{ 
+{
 	char c;
 	int i;
-	
+
 	for (i = 0; i <	10; i++)
 	{
-		for (c = 'a'; i <= 'z'; c++)
+		for (c = 'a'; c <= 'z'; c++)
 		{
 			_putchar(c);
 		}
