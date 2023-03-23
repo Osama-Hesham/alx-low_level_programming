@@ -1,10 +1,9 @@
 #include "main.h"
 /**
  * _isupper - blalbalba
- * @c: char 
+ * @c: char
  * Return: 0 or 1
  */
-
 int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
@@ -16,4 +15,3 @@ int _isupper(int c)
 		return (0);
 	}
 }
-
