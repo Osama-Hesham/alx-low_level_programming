@@ -12,10 +12,11 @@ void print_rev(char *str)
 		i++;
 		str++;
 	}
-	while (i != 0)
+	while (i != -1)
 	{
-		_putchar(*(str + i));
+		_putchar(*(str-1));
 		i--;
+		str--;
 	}
 	_putchar('\n');
 }
