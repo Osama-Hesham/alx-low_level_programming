@@ -17,7 +17,7 @@ int _atoi(char *s)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			x = atoi(s[i]);
+			x = s[i];
 			number = number * 10 + x;
 		}
 		s++;
