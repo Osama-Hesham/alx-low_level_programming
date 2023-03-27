@@ -13,7 +13,7 @@ void puts_half(char *str)
 	while (*ptr != '\0')
 	{
 		c++;
-		str++;
+		ptr++;
 	}
 	if (c % 2 == 0)
 	{
