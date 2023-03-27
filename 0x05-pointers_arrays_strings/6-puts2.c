@@ -10,17 +10,17 @@ void puts2(char *str)
 	int i;
 	char *ptr = str;
 
-	while (*str != '\0')
+	while (*ptr != '\0')
 	{
 		c++;
-		str++;
+		ptr++;
 	}
 
 	while (i < c)
 	{
-		if (*(ptr + i) != '\0')
+		if (*str != '\0')
 		{
-		_putchar(*(ptr + i));
+		_putchar(str[i]);
 		}
 		i = i + 2;
 	}
