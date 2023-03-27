@@ -24,7 +24,7 @@ int _atoi(char *s)
 		c++;
 	}
 	
-	char temp[len];
+	char temp[100];
 
 	for (i = 0; i < c; i++)
 	{
