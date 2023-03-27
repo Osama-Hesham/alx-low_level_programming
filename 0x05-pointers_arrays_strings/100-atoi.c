@@ -13,6 +13,7 @@ int _atoi(char *s)
 	int i = 0;
 	int len = 0;
 	int index = 0;
+	char temp[100];
 
 	while (*s != '\0')
 	{
@@ -23,9 +24,6 @@ int _atoi(char *s)
 		s++;
 		c++;
 	}
-	
-	char temp[100];
-
 	for (i = 0; i < c; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
