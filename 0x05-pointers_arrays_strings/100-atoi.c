@@ -8,20 +8,7 @@
  */
 int _atoi(char *s)
 {
-	int x;
-	int c = 0;
-	int i = 0;
-	int number = 0;
+	int x = atoi(s);
 
-	while (*s != '\0')
-	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			x = s[i];
-			number = number * 10 + x;
-		}
-		s++;
-		c++;
-	}
-	return (number);
+	return (x);
 }
