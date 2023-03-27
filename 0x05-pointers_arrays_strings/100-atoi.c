@@ -12,26 +12,16 @@ int _atoi(char *s)
 	int c = 0;
 	int i = 0;
 	int len = 0;
-	int index = 0;
-	char temp[100];
+	int number = 0;
 
 	while (*s != '\0')
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			len++;
+			number = number * 10 + atoi(s[i]);
 		}
 		s++;
 		c++;
 	}
-	for (i = 0; i < c; i++)
-	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			temp[index] = s[i];
-			index++;
-		}
-	}
-	x = atoi(temp);
-	return (x);
+	return (number);
 }
