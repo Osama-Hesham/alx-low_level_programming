@@ -7,7 +7,7 @@
 void puts2(char *str)
 {
 	int c = 0;
-	int i;
+	int i = 0;
 	char *ptr = str;
 
 	while (*ptr != '\0')
@@ -16,12 +16,9 @@ void puts2(char *str)
 		ptr++;
 	}
 
-	while (i < c)
-	{
-		
-		
+	while (i <= c - 1)
+	{	
 		_putchar(str[i]);
-		
 		i = i + 2;
 	}
 	_putchar('\n');
