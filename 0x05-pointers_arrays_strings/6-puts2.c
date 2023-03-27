@@ -8,7 +8,7 @@ void puts2(char *str)
 {
 	int c = 0;
 	int i;
-	int *ptr = str;
+	char *ptr = str;
 
 	while (*str != '\0')
 	{
@@ -16,7 +16,7 @@ void puts2(char *str)
 		str++;
 	}
 
-	for (i = 0; i < c; i+2)
+	for (i = 0; i < c; i + 2)
 	{
 		if (*(ptr + i) != '\0')
 		{
