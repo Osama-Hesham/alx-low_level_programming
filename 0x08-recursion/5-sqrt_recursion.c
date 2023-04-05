@@ -12,7 +12,7 @@ int sqrt_helper(int n, int guess)
 		return (guess);
 	}
 	else if (guess * guess > n)
-	{	
+	{
 		return (-1);
 	}
 	else
@@ -22,14 +22,14 @@ int sqrt_helper(int n, int guess)
 }
 /**
  * _sqrt_recursion - sqrt
- * @n: input 
+ * @n: input
  * Return: output
  */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
 	{
-        	return (-1);
+		return (-1);
 	}
 	else
 	{
