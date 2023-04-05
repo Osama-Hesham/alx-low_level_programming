@@ -1,16 +1,26 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * factorial - returns the factorial of a number
- * @n: number to return the factorial from
+ * main - check the code
  *
- * Return: factorial of n
+ * Return: Always 0.
  */
-int factorial(int n)
+int main(void)
 {
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (1);
-	return (n * factorial(n - 1));
+    int r;
+
+    r = _pow_recursion(1, 10);
+    printf("%d\n", r);
+    r = _pow_recursion(1024, 0);
+    printf("%d\n", r);
+    r = _pow_recursion(2, 16);
+    printf("%d\n", r);
+    r = _pow_recursion(5, 2);
+    printf("%d\n", r);
+    r = _pow_recursion(5, -2);
+    printf("%d\n", r);
+    r = _pow_recursion(-5, 3);
+    printf("%d\n", r);
+    return (0);
 }
