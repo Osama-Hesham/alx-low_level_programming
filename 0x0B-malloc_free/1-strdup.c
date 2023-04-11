@@ -7,11 +7,12 @@
  * @str: input
  *  Return: output
  */
+
 char *_strdup(char *str)
 {
 	int i = 0;
-	char *ptr =  malloc(sizeof(char) * strlen(str);
-	
+	char *ptr = malloc(sizeof(char) * strlen(str));
+
 	if (ptr == NULL || str == NULL)
 	{
 		return (NULL);
