@@ -6,7 +6,7 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int *ptr = malloc(b);
+	var *ptr = malloc(b);
 
 	if (ptr == NULL)
 	{
@@ -14,6 +14,6 @@ void *malloc_checked(unsigned int b)
 	}
 	else
 	{
-		return ptr;
+		return (ptr);
 	}
 }
