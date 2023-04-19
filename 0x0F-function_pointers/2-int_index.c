@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 /**
  * int_index - find index
  * @array: input
@@ -12,7 +13,6 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i = 0;
-	bool found = false;
 
 	if (size <= 0 || cmp == NULL || array == NULL)
 	{
@@ -22,12 +22,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		if (cmp(array[i]))
 		{
-			found = true;
 			return (i);
 		}
 	}
-	if (!found)
-	{
 		return (-1);
-	}
 }
