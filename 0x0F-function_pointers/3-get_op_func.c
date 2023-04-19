@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdbool.h>
 /**
- * get_op_function - executes an operation
+ * (*get_op_function) - executes an operation
  * @s: input
  * Return: output
  */

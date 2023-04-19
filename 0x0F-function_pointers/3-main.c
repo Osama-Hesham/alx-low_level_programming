@@ -4,11 +4,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-
+/**
+ * * main - executes op function
+ * @argc: input
+ * @argv: input
+ * Return: output
+ */
 int main(int argc, char *argv[])
 {
 	char *op = argv[2];
-	int a; 
+	int a;
 	int b;
 
 	a = atoi(argv[1]);
