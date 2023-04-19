@@ -7,11 +7,12 @@
 
 int main(int argc, char *argv[])
 {
-	char *op = argv[2];;
-	int a = atoi(argv[1]);
-	int b = atoi(argv[3]);
+	char *op = argv[2];
+	int a; 
+	int b;
 
-
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 	if (argc != 4)
 	{
 		printf("Error\n");
