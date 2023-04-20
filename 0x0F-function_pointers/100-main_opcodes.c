@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int bytes = atoi(argv[1]);
 	int i = 0;
-	char *arr = (char *)main;;
+	char *arr = (char *)main;
 
 	if (bytes < 0)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
-	
+
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)
@@ -37,5 +37,4 @@ int main(int argc, char *argv[])
 		printf("%02hhx ", arr[i]);
 	}
 	return (0);
-
 }
