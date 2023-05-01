@@ -4,7 +4,7 @@
 #include <string.h>
 /**
  * pop_listint - delete head node
- * @head: input 
+ * @head: input
  * Return: output
  */
 int pop_listint(listint_t **head)
