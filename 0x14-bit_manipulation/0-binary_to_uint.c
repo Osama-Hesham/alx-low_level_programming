@@ -21,8 +21,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		for (i = 0; b[i]; i++)
 		{
-			int j = 0;
-			int res = 0;
+			unsigned int j = 0;
+			unsigned int res = 0;
 
 			if (b[i] != '1' || b[i] != '0')
 			{
