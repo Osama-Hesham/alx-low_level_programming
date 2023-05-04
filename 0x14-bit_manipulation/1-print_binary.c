@@ -10,7 +10,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned int x = 0; 
-	unsigned int i = 0;
+	int i = 0;
 	unsigned long int num;
 
 	for (i = 63; i >= 0; i--)
@@ -27,7 +27,7 @@ void print_binary(unsigned long int n)
 			putchar('0');
 		}
 	}
-	if (!count)
+	if (!x)
 	{
 		putchar('0');
 	}
