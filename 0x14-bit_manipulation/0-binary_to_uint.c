@@ -27,9 +27,9 @@ unsigned int binary_to_uint(const char *b)
 			}
 			else
 			{
-				num += pow(2,i) * b[i] ;
+				n += pow(2,i) * b[i] ;
 			}
 		}
-		return (num);
+		return (n);
 	}
 }
