@@ -34,8 +34,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-    while ((readfile = read(file1, buffer, 1024)) > 0) {
-        writefile = write(file2, buffer, readfile);
+    while ((readfile = read(file1, letter, 1024)) > 0) {
+        writefile = write(file2, letter, readfile);
         if (writefile != readfile) {
             dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
             exit(99);
