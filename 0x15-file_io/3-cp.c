@@ -12,11 +12,8 @@
 int main(int argc, char *argv[])
 {
 	char *letter = malloc(sizeof(char) * 1024);
-	int file1;
-	int file2;
-	int readfile;
-	int writefile;
-	
+	int writefile, readfile, file1, file2;
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: %s file1 file2\n", argv[0]);
@@ -34,20 +31,24 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-    while ((readfile = read(file1, letter, 1024)) > 0) {
-        writefile = write(file2, letter, readfile);
-        if (writefile != readfile) {
-            dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-            exit(99);
-        }
-    }
-    if (close(file1) == -1) {
-        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1);
-        exit(100);
-    }
-    if (close(file2) == -1) {
-        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file2);
-        exit(100);
-    }
-    return 0;
+	while ((readfile = read(file1, letter, 1024)) > 0)
+	{
+		writefile = write(file2, letter, readfile);
+		if (writefile != readfile)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+	if (close(file1) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1);
+		exit(100);
+	}
+	if (close(file2) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file2);
+		exit(100);
+	}
+	return (0);
 }
