@@ -11,10 +11,10 @@
  */
 int main(int argc, char *argv[])
 {
-	char *letter;
+	char *letter = malloc(sizeof(char) * 1024);
 	int file1;
-	int file2
-	int readfile
+	int file2;
+	int readfile;
 	int writefile;
 	
 	if (argc != 3)
