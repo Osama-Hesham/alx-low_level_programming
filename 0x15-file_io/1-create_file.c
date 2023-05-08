@@ -19,9 +19,12 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	while (text_content[i])
+	if (text_content)
 	{
-		i++;
+		while (text_content[i])
+		{
+			i++;
+		}
 	}
 	writefile = write(myfile, text_content, i);
 	if (writefile == -1 || myfile == -1)
