@@ -13,6 +13,9 @@ void error(char *msg) {
 
 void elf_header(Elf64_Ehdr *header) {
     char *magic_str = malloc(EI_NIDENT * 3 + 1);
+    char *type_str = "<unknown>";
+    char *osabi_str = "<unknown>";
+
     sprintf(magic_str, "%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x",
             header->e_ident[0], header->e_ident[1], header->e_ident[2], header->e_ident[3],
             header->e_ident[4], header->e_ident[5], header->e_ident[6], header->e_ident[7],
@@ -25,7 +28,6 @@ void elf_header(Elf64_Ehdr *header) {
     printf("  Data:                              %s\n", header->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" : "2's complement, big endian");
     printf("  Version:                           %d%s\n", header->e_ident[EI_VERSION], header->e_ident[EI_VERSION] == EV_CURRENT ? " (current)" : "");
 
-    char *osabi_str = "<unknown>";
     if (header->e_ident[EI_OSABI] == ELFOSABI_SYSV) {
         osabi_str = "UNIX - System V";
     } else if (header->e_ident[EI_OSABI] == ELFOSABI_HPUX) {
@@ -48,10 +50,7 @@ void elf_header(Elf64_Ehdr *header) {
         osabi_str = "Standalone App";
     }
     printf("  OS/ABI:                            %s\n", osabi_str);
-
     printf("  ABI Version:                       %d\n", header->e_ident[EI_ABIVERSION]);
-
-    char *type_str = "<unknown>";
     if (header->e_type == ET_NONE) {
         type_str = "NONE (No file type)";
     } else if (header->e_type == ET_REL) {
