@@ -12,7 +12,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t myfile = open(filename, O_RDONLY);
-	char *letter;
+	char *letter = malloc(sizeof(char) * letters);
 
 	if (myfile == -1)
 	{
