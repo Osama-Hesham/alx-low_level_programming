@@ -6,12 +6,12 @@
 #include <unistd.h>
 #include <elf.h>
 
-void error(char *msg) {
+void print_error(char *msg) {
     fprintf(stderr, "Error: %s\n", msg);
     exit(98);
 }
 
-void elf_header(Elf64_Ehdr *header) {
+void print_elf_header(Elf64_Ehdr *header) {
     char *magic_str = malloc(EI_NIDENT * 3 + 1);
     char *type_str = "<unknown>";
     char *osabi_str = "<unknown>";
@@ -75,26 +75,26 @@ int main(int argc, char **argv) {
     ssize_t readfile = read(myfile, &header, sizeof(header));
 
     if (argc != 2) {
-        error("Usage: elf_header elf_filename");
+        print_error("Usage: elf_header elf_filename");
     }
     if (myfile == -1) {
-        error("Cannot open file");
+        print_error("Cannot open file");
     }
     if (readfile != sizeof(header))
     {
-        error("Cannot read ELF header");
+        print_error("Cannot read ELF header");
     }
 
     if (memcmp(header.e_ident, ELFMAG, SELFMAG) != 0)
     {
-        error("Not an ELF file");
+        print_error("Not an ELF file");
     }
 
-    elf_header(&header);
+    print_elf_header(&header);
 
     if (close(myfile) == -1)
     {
-        error("Cannot close file");
+        print_error("Cannot close file");
     }
     return (0);
 }
